@@ -1,7 +1,6 @@
 "use client";
 
 import {useSearchParams} from "next/navigation";
-import {Page} from "../style";
 
 export default function Profile(){
     const p=useSearchParams();
