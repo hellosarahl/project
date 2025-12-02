@@ -34,8 +34,6 @@ export async function GET(r:Request){
         p.append("name",us.name);
  
 
-
-
         return NextResponse.redirect(new URL(`/profile?${p.toString()}`,r.url));
 
 }
