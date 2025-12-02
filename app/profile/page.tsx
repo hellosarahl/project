@@ -1,16 +1,19 @@
-"use client";
 
-import {useSearchParams} from "next/navigation";
-export const dynamic="force-dynamic";
+export default function Profile({
+    searchParams,
+}:{
+    searchParams:{
+        name?:string;
+        email?:string;
+        username?:string;
+    };
+}){
 
-export default function Profile(){
-    const p=useSearchParams();
+    const name=searchParams?.name;
 
-    const name=p.get("name");
+    const user=searchParams?.username;
 
-    const user=p.get("username");
-
-    const e= p.get("email");
+    const e=searchParams?.email;
 
     return(
         <div className="box">
